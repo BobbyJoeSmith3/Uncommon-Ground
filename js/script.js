@@ -1,4 +1,5 @@
 var intervalId;
+var coverRemoved = false;
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     intervalId = setInterval(function () {
@@ -40,18 +41,26 @@ function timesUp () {
     });
 }
 
-jQuery(function ($) {
-    var tenMinutes = 60 * 10,
-        display = $('#time');
-    startTimer(tenMinutes, display);
-});
+// jQuery(function ($) {
+//     var tenMinutes = 60 * 10,
+//         display = $('#time');
+//     startTimer(tenMinutes, display);
+// });
 
 // Bind an event to window.orientationchange that, when the device is turned,
 // gets the orientation and displays it to on screen.
 $( window ).on( "orientationchange", function( event ) {
-  $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
-  // console.log( "This device is in " + event.orientation + " mode!" );
+  // $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+  if (event.orientation == "portrait" && coverRemoved == false) {
+    $( ".cover" ).fadeOut(400);
+    coverRemoved = true;
+    var tenMinutes = 60 * 10,
+        display = $('#time');
+    startTimer(tenMinutes, display);
+  }
+
+  console.log( "This device is in " + event.orientation + " mode!" );
 });
 
 // You can also manually force this event to fire.
-// $( window ).orientationchange();
+$( window ).orientationchange();
