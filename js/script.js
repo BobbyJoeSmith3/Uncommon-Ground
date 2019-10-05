@@ -59,3 +59,6 @@ $( window ).on( "orientationchange", function( event ) {
 
 // You can also manually force this event to fire.
 $( window ).orientationchange();
+
+// Hide the loading message
+$.mobile.autoInitializePage = false;
