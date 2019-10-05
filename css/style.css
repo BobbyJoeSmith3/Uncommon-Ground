@@ -1,0 +1,102 @@
+body {
+	background-color: #e7e7e7;
+	width: 100vw;
+	font-family: 'terminal_grotesque_regular';
+	font-size: 70px;
+	box-sizing: border-box;
+	padding: 4vw;
+}
+
+h1 {
+	font-family: 'terminal_grotesque_open';
+	font-size: 4rem;
+	text-transform: uppercase;
+	padding-bottom: 4rem;
+}
+
+p {
+	padding-bottom: 4rem;
+	line-height: 1.2;
+}
+
+img {
+	width: 100%;
+	padding-bottom: 4rem;
+}
+
+.open {
+	font-family: 'terminal_grotesque_open';
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+.super {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+.sub {
+	vertical-align: sub;
+	font-style: italic;
+	font-size: smaller;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.threedee {
+	font-family: 'terminal_grotesque_open';
+	transform: translate(50%,-50%);
+	text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.interrupt {
+	display: none;
+}
+
+#time {
+	font-size: 8rem;
+	position: fixed;
+	color: #0aec13;
+	z-index: 1;
+	top: 1vh;
+	right: 2vw;
+	padding-bottom: 0;
+}
+
+.dialogue {
+	font-family: 'terminal_grotesque_regular';
+	font-size: 2rem;
+	line-height: 1.2rem;
+	/* position: fixed;
+	height: 90vh;
+	width: 90vw;
+	top: 5vh;
+	left: 5vw; */
+	background-color: aliceblue;
+	overflow: scroll;
+}
