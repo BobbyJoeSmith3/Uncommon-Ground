@@ -12,8 +12,6 @@ function startTimer(duration, display) {
         display.text(minutes + ":" + seconds);
 
         if (--timer < 0) {
-            // timer = duration;
-
             timesUp();
             clearInterval(intervalId);
         }
@@ -50,16 +48,13 @@ function timesUp () {
 // Bind an event to window.orientationchange that, when the device is turned,
 // gets the orientation and displays it to on screen.
 $( window ).on( "orientationchange", function( event ) {
-  // $( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
-  if (event.orientation == "portrait" && coverRemoved == false) {
-    $( ".cover" ).fadeOut(400);
-    coverRemoved = true;
-    var tenMinutes = 60 * 10,
-        display = $('#time');
-    startTimer(tenMinutes, display);
-  }
-
-  console.log( "This device is in " + event.orientation + " mode!" );
+    if (event.orientation == "portrait" && coverRemoved == false) {
+      $( ".cover" ).fadeOut(400);
+      coverRemoved = true;
+      var tenMinutes = 60 * 10,
+          display = $('#time');
+      startTimer(tenMinutes, display);
+    }
 });
 
 // You can also manually force this event to fire.
