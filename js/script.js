@@ -56,12 +56,13 @@ $( window ).on( "orientationchange", function( event ) {
     //       display = $('#time');
     //   startTimer(tenMinutes, display);
     // }
-
-    $( ".cover" ).fadeOut(400);
-    coverRemoved = true;
-    var tenMinutes = 60 * 10,
-      display = $('#time');
-    startTimer(tenMinutes, display);
+    if (coverRemoved == false) {
+      $( ".cover" ).fadeOut(400);
+      coverRemoved = true;
+      var tenMinutes = 60 * 10,
+          display = $('#time');
+      startTimer(tenMinutes, display);
+    }
 });
 
 // You can also manually force this event to fire.
