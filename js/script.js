@@ -19,10 +19,14 @@ function startTimer(duration, display) {
 }
 
 function timesUp () {
+    var height = $(window).height();
+    console.log(height);
+    var newHeight = height * 0.90;
+    console.log(newHeight);
 	$( "#dialog-confirm" ).dialog({
         resizable: false,
-        height: 800,
-        width: 1000,
+        height: newHeight, //800
+        width: "90vw", //1000
         modal: true,
         buttons: {
             "Reclaim Time": function() {
@@ -37,6 +41,7 @@ function timesUp () {
             effect: "bounce"
         }
     });
+
 }
 
 // jQuery(function ($) {

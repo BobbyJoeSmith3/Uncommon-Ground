@@ -1,18 +1,19 @@
 body {
 	background-color: #e7e7e7;
+	font-size: 12px;
 }
 
 .site-container, .cover {
 	width: 100vw;
 	font-family: 'terminal_grotesque_regular';
-	font-size: 70px;
+	/* font-size: 70px; */
 	box-sizing: border-box;
 	padding: 4vw;
 }
 
 h1 {
 	font-family: 'terminal_grotesque_open';
-	font-size: 4rem;
+	font-size: 4.4rem;
 	text-transform: uppercase;
 	padding-bottom: 4rem;
 }
@@ -20,6 +21,7 @@ h1 {
 p {
 	padding-bottom: 4rem;
 	line-height: 1.2;
+	font-size: 4.4rem;
 }
 
 img {
@@ -113,7 +115,37 @@ img {
 }
 
 .coverPrompt {
-	font-size: 24px;
+	font-size: 2rem;
 	position: fixed;
-	bottom: 20vh;
+	bottom: 0vh;
+}
+
+@media screen and (max-width: 1023px) {
+	.cover {
+		font-size: 4rem;
+	}
+
+	h1 {
+		font-size: 3.8rem;
+	}
+
+	p {
+		font-size: 2.4rem;
+	}
+
+	#time {
+		font-size: 5rem;
+	}
+
+	.reclaim {
+		font-size: 1.8rem;
+	}
+
+	.ui-dialog-title {
+		font-size: 1.2rem;
+	}
+
+	.ui-button {
+		font-size: 1.2rem;
+	}
 }
