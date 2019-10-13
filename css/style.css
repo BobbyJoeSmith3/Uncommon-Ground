@@ -111,3 +111,9 @@ img {
 .hide {
 	display: none;
 }
+
+.coverPrompt {
+	font-size: 24px;
+	position: fixed;
+	bottom: 20vh;
+}

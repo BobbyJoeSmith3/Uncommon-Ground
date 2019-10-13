@@ -48,17 +48,27 @@ function timesUp () {
 // Bind an event to window.orientationchange that, when the device is turned,
 // gets the orientation and displays it to on screen.
 $( window ).on( "orientationchange", function( event ) {
-    if (event.orientation == "portrait" && coverRemoved == false) {
-      $( ".cover" ).fadeOut(400);
-      coverRemoved = true;
-      var tenMinutes = 60 * 10,
-          display = $('#time');
-      startTimer(tenMinutes, display);
-    }
+    // For presentation mode
+    // if (event.orientation == "portrait" && coverRemoved == false) {
+    //   $( ".cover" ).fadeOut(400);
+    //   coverRemoved = true;
+    //   var tenMinutes = 60 * 10,
+    //       display = $('#time');
+    //   startTimer(tenMinutes, display);
+    // }
+
+    $( ".cover" ).fadeOut(400);
+    coverRemoved = true;
+    var tenMinutes = 60 * 10,
+      display = $('#time');
+    startTimer(tenMinutes, display);
 });
 
 // You can also manually force this event to fire.
-$( window ).orientationchange();
+function fire() {
+    $( window ).orientationchange();
+}
+
 
 // Hide the loading message
 $.mobile.autoInitializePage = false;
